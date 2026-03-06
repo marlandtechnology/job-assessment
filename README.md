@@ -3,17 +3,17 @@ Assignment is to transform Marketplace into STAR schema with core calculations: 
 Use DBT to model the data and create a new repo and submit the DBT project for review in a public repo.
 
 
-##Core Tables (Entities)
+Core Tables (Entities)
 
-    ##CUSTOMER: Stores primary user profiles.
+    customer: Stores primary user profiles.
 
         Fields: customer_id (PK), first_name, last_name, email (Unique), created_at.
 
-    ##CUSTOMER_ADDRESS: A localized table allowing customers to store multiple shipping locations.
+    customer_address: A localized table allowing customers to store multiple shipping locations.
 
         Fields: address_id (PK), customer_id (FK), address_line_1, city, state, zip_code, is_default_shipping.
 
-    ##SELLER: Details for third-party vendors or internal storefronts.
+    seller: Details for third-party vendors or internal storefronts.
 
         Fields: seller_id (PK), store_name, rating, joined_date.
 
